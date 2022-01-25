@@ -1,0 +1,10 @@
+# vsc 코드로 ssh 서버 접속하기
+
+
+
+- 확장 프로그램으로 Remote Development를 설치
+- ctrl+shift+p를 눌러서 Remote-SSH: Connect to Host ... 를 클릭
+- 그 후 ssh userid@host를 입력(알맞는 userid와 host)
+- 알맞는 비밀번호 입력하면 서버 접속 가능
+
+출처 : https://evols-atirev.tistory.com/28

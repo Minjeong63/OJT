@@ -1,0 +1,9 @@
+# Next.js 설치
+
+
+
+- 터미널에서 프로젝트 디렉토리로 위치 설정 후, npx create-next-app 프로젝트이름 입력
+- cd 프로젝트이름
+- npm run dev
+
+출처 : https://velog.io/@geonoo99/NextJS-%EC%84%B8%ED%8C%85%ED%95%98%EA%B8%B0

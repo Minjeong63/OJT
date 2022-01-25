@@ -1,0 +1,7 @@
+# next
+
+
+- warning: LF will be replaced by CRLF in next/styles/globals.css.
+The file will have its original line endings in your working directory
+
+위의 오류가 발생했을 때 : git config --global core.autocrlf true 입력

@@ -1,0 +1,109 @@
+# 파일을 github에 추가하는 과정
+
+
+
+
+
+git init
+- Git 저장소를 새로 만드는 명령
+- 현재 디렉토리를 Git 저장소로 변환함
+
+
+git remote add origin 레파지토리주소
+
+git add
+- 만든 파일을 인덱스에 추가함
+- 해당 파일을 추적(stage)시키는 명령어
+- git add . : 변경이 일어난 모든 파일을 추적하게 함
+- 인덱스는 저장소에 커밋 할 준비를 하기 위해 변경 내용을 임시로 저장할 위치임
+- ex) git add hello.html
+
+
+git commit -m "메모할 내용"
+- 인덱스에 추가 된 파일을 커밋함
+- 커밋은 파일이나 디렉토리의 추가 또는 변경을 저장소에 기록하는 작업
+- 추적되고 있는 파일만 커밋에 포함함
+
+
+git status
+- 저장소에 파일이 추가되어 있는 지 확인하는 명령어
+- 마지막 커밋 이후 작업공간에서 변경이 일어난 모든 파일들을 나열하는 명령어
+- 현재 추적되고 있는 파일을 초록색으로 표시하고 그렇지 않은 파일은 빨간색으로 나타냄
+
+
+git push origin master
+- 로컬 저장소의 변경 사항을 Github에 있는 원격 저장소에 반영하기 위해 다음 명령을 실행함
+- 오류 생겼을 때 git push origin +master하면 해결 가능할 수도 있음
+- git push도 가능
+
+* origin : 기본 설정된 원격 주소에 붙는 별명
+
+
+
+
+
+
+# git 원격 명령어
+
+
+
+git remote
+- 원격과 로컬 저장소를 연결시키는 명령어
+
+
+git clone
+- 로컬에서의 git init에 해당하는 명령어
+- 원격에서 저장소를 최초로 가져올 때는 git pull 대신 git clone을 사용
+
+
+git fetch
+- 원격에서 업데이트된 저장소를 받아와서 로컬 저장소를 갱신하는 명령어
+
+
+git pull
+- git fetch 한 다음 작업공간까지도 갱신하는 명령어
+
+
+
+
+
+
+
+commit message 변경하기
+- ex) git commit --amend
+
+
+
+
+
+
+# 브랜치에 대해서
+
+
+
+git branch
+- 브랜치 목록 살펴보기
+- 결과값 앞에 *이 붙는다면 현재 브랜치라는 의미
+
+
+git branch subdir01
+- subdir01이라는 새로운 브랜치 생성
+
+
+git checkout subdir01
+- 브랜치의 이동 명령어
+
+
+git checkout -b subdir01
+- 지점 만들기 및 이동의 명령어
+
+
+git push origin subdir01
+- 브랜치 이름을 지정하면 subdir01로 파일을 푸쉬할 수 있음
+
+
+
+
+* Git : 버전 관리 소프트웨어
+* GitHub : 깃허브라는 회사의 서버를 빌려서 원격 저장소를 만들고 관리할 수 있게 하는 웹사이트
+

@@ -1,0 +1,14 @@
+# Nest.js 설치
+
+
+
+- git bash에 들어가서 프로젝트 디렉토리로 위치 설정 후, npm i -g @nest/cli 입력
+- 그 후 nest new 입력 후 프로젝트 이름 입력한 후 npm, yarn 등 중 하나 선택
+- cd 프로젝트명/ 을 입력하면 위치 이동
+- code . 을 입력하면 vsc를 실행해줌
+- 그 후 깃헙에서 생성한 레파지토리를 연결
+(https://github.com/Minjeong63/OJT.git)
+- npm run start:dev를 통해 서버 실행해줌(npm run start도 가능)
+- 브라우저에서 localhost:3000으로 들어가면 Hello World!를 볼 수 있어야함
+
+출처 : https://choseongho93.tistory.com/288
