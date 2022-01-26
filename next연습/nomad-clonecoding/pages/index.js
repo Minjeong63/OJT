@@ -1,17 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import NavBar from "../conponents/NavBar";
+import Seo from "../conponents/Seo";
+
+const API_KEY = "9681b24cba137dbc5fc9d831319eb1d5";
 
 export default function Home() {
-  const [counter, setCounter] = useState(0);
-  const router = useRouter();
-  console.log(router);
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    (async () => {
+      const { results } = await (
+        await fetch(
+          `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
+        )
+      ).json();
+      setMovies(results);
+    })();
+  }, []);
   return (
     <div>
-      <div>
-        Home {counter}
-        <button onClick={() => setCounter((item) => item + 5)}>+5</button>
-      </div>
+      <Seo title="Home" />
+      {!movies && <h4>Loading...</h4>}
+      {movies?.map((movie) => (
+        <div key={movie.id}>
+          <h4>{movie.original_title}</h4>
+        </div>
+      ))}
+
+      <style jsx>
+        {`
+          div {
+            text-align: center;
+            font-size: xx-large;
+          }
+        `}
+      </style>
     </div>
   );
 }
