@@ -1,6 +1,8 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -14,6 +16,28 @@ async function bootstrap() {
     // forbidNonWhitelisted : true로 설정하면 화이트리스트에 없는 property validator를 제거하는 대신 예외가 발생
     // transform : 유저들이 보낸 거를 우리가 원하는 실제 타입으로 변환해줌
   )
+
+  const config = new DocumentBuilder()
+  .setTitle('sample Api')
+  .setDescription('')
+  .setVersion('1.0')
+  .addTag('')
+  .addBearerAuth(
+    {
+      type: 'http',
+      scheme: 'bearer',
+      bearerFormat: 'JWT',
+      name: 'JWT',
+      description: 'Enter JWT token',
+      in: 'header',
+    },
+    'accesskey',
+  )
+  .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document); // swagger end point url: /docs
+
+
   await app.listen(9102);
 }
 bootstrap();
