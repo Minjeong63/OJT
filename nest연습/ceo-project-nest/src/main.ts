@@ -8,7 +8,7 @@ async function bootstrap() {
 
   // SWAGGER 관련 설정
   const config = new DocumentBuilder()
-    .setTitle('민정ceo Api')
+    .setTitle('민정 API')
     .setDescription('')
     .setVersion('1.0')
     .addTag('')
