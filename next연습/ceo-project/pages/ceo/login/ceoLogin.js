@@ -1,8 +1,8 @@
 import router from "next/router";
 import { useState } from "react";
 import axios from "axios";
-import OnClickButton from "../../components/onclickbutton";
-import TextInput from "../../components/textinput";
+import OnClickButton from "../../../components/onclickbutton";
+import TextInput from "../../../components/textinput";
 
 export default function CeoLogin() {
   const [ceo, setCeo] = useState("");
@@ -38,26 +38,33 @@ export default function CeoLogin() {
       </div>
       <div>
         <OnClickButton
-          onclick={() => router.push("/ceo/id/findId")}
-          content="아이디 찾기"
-        />
-
-        <OnClickButton
           onclick={() =>
             ceo !== "" && ceoId !== ""
               ? axios
                   .get(`http://localhost:9101/ceo/${ceoId}/${ceo}`)
                   .then((res) =>
                     router.push(
-                      `http://localhost:3002/ceo/${res.data.id}/${res.data.password}`
+                      `http://localhost:9100/ceo/login/${res.data.id}/${res.data.password}`
                     )
                   )
                   .catch((err) =>
-                    router.push(`http://localhost:3002/ceo/ceoError`)
+                    router.push(`http://localhost:9100/ceo/login/ceoError`)
                   )
-              : router.push("http://localhost:3002/ceo/ceoError")
+              : router.push("http://localhost:9100/ceo/login/ceoError")
           }
           content="로그인 하기"
+        />
+
+        <OnClickButton
+          onclick={() => router.push("http://localhost:9100/ceo/id/findId")}
+          content="아이디 찾기"
+        />
+
+        <OnClickButton
+          onclick={() =>
+            router.push("http://localhost:9100/ceo/password/findPassword")
+          }
+          content="비밀번호 찾기"
         />
       </div>
     </div>

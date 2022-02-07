@@ -1,9 +1,9 @@
 import router from "next/router";
-import OnClickButton from "../../components/onclickbutton";
+import OnClickButton from "../../../components/onclickbutton";
 
-export default function CeoError() {
+export default function FindPasswordError() {
   const backPage = () => {
-    router.push("/ceo/ceoLogin");
+    router.push("./findPassword");
   };
   return (
     <div>

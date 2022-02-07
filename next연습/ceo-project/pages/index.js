@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <OnClickButton
-        onclick={() => router.push("/ceo/ceoLogin")}
+        onclick={() => router.push("/ceo/login/ceoLogin")}
         content="CEO LOGIN"
       />
       <OnClickButton
