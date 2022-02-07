@@ -30,7 +30,7 @@ export class CeoService {
         return found
     }
 
-    getName(name: string, id: string): Ceo {
+    getName(name: string): Ceo {
         const found = this.ceo.find((ceo) => ceo.name === name)
 
         if(!found) {
@@ -39,4 +39,16 @@ export class CeoService {
         return found
 
     }
+
+    getId(id: string, name: string): Ceo {
+        const found = this.ceo.find((ceo) => ceo.id === id && ceo.name === name)
+
+        if(!found) {
+            throw new NotFoundException(`Can't find Ceo with ${id} & ${name}`);
+        }
+        return found
+
+    }
+
+    
 }

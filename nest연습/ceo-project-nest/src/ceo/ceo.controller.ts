@@ -36,9 +36,19 @@ export class CeoController {
     @ApiOperation({summary: "특정 CEO 조회", description: "name에 해당하는 CEO를 조회합니다."})
     getOneName(
         @Param('name') name: string,
-        @Param('id') id: string
+        
         ): Ceo {
-        return this.ceoService.getName(name, id)
+        return this.ceoService.getName(name)
+    }
+
+
+    @Get("/:name/:id")
+    @ApiOperation({summary: "특정 id를 가진 CEO의 password 조회", description: "변수와 id 값이 같은 CEO의 비밀번호를 조회합니다."})
+    getIdPassword(
+        @Param('name') name: string,
+        @Param('id') id: string,
+        ): Ceo {
+            return this.ceoService.getId(name, id)
     }
 
     
