@@ -1,8 +1,8 @@
 import axios from "axios";
 import router from "next/router";
 import { useState } from "react";
-import OnClickButton from "../../../components/onclickbutton";
-import TextInput from "../../../components/textinput";
+import OnClickButton from "../../../components/OnClickButton";
+import TextInput from "../../../components/TextInput";
 
 export default function FindPassword() {
   const [name, setName] = useState("");

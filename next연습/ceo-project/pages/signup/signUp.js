@@ -1,14 +1,19 @@
-import Home from "../../components/home";
-import OnClickButton from "../../components/onclickbutton";
-import TextInput from "../../components/textinput";
+import Main from "../../components/Main";
+import OnClickButton from "../../components/OnClickButton";
+import TextInput from "../../components/TextInput";
 import { useState } from "react";
 import axios from "axios";
 import router from "next/router";
 
 export default function SignUp() {
+  const [ownerNumber, setOwnerNumber] = useState("");
   const [name, setName] = useState("");
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
+
+  const onOwnerNumber = (e) => {
+    setOwnerNumber(e.target.value);
+  };
 
   const onName = (e) => {
     setName(e.target.value);
@@ -25,6 +30,13 @@ export default function SignUp() {
       <h1>CEO SIGNUP</h1>
 
       <div>
+        사업자등록번호 :{" "}
+        <TextInput
+          content="사업자등록번호를"
+          onchange={onOwnerNumber}
+          value={ownerNumber}
+        />
+        <br></br>
         이름 : <TextInput content="이름을" onchange={onName} value={name} />
         <br></br>
         아이디 : <TextInput content="아이디를" onchange={onId} value={id} />

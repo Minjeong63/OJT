@@ -1,5 +1,5 @@
 import router from "next/router";
-import OnClickButton from "../../../components/onclickbutton";
+import OnClickButton from "../../../components/OnClickButton";
 
 export default function CeoError() {
   const backPage = () => {

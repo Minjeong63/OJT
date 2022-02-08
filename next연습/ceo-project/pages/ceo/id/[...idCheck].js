@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import OnClickButton from "../../../components/onclickbutton";
+import OnClickButton from "../../../components/OnClickButton";
 
 export default function IdCheck() {
   const router = useRouter();
