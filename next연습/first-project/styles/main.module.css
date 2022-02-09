@@ -109,9 +109,14 @@
   transition: 0.5s;
   -webkit-animation: lbWRkT 1s forwards;
   animation: lbWRkT 1s forwards;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 .layout {
-  width: 1200px;
+  width: 1400px;
   height: 100%;
   min-height: 100%;
   display: -webkit-box;
@@ -135,7 +140,7 @@
   padding: 50px 0px;
 }
 .mksubtitle {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 800;
   line-height: 1.6;
   color: #000000;
@@ -154,37 +159,40 @@
   font-weight: bold;
 }
 .mktitle {
-  font-size: 45px;
-  font-weight: 800;
-  line-height: 1.6;
-  color: #292929;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fdc13efa;
   margin: 0px;
-  padding: 0px;
+  padding: 20px;
   text-align: center;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  z-index: 1;
-  white-space: pre-wrap;
-  -webkit-letter-spacing: 0px;
-  -moz-letter-spacing: 0px;
-  -ms-letter-spacing: 0px;
-  letter-spacing: 0px;
-  background: linear-gradient(
-    180deg,
-    hsla(224, 54%, 42%, 1) 0%,
-    hsla(216, 100%, 63%, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
+
+.mktitles {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fdc13efa;
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
 .signupinputbox {
-  width: 400px;
-  height: 45px;
-  border: 1px solid #c4c4c4;
-  padding: 0px 8px;
-  border-radius: 4px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  font-size: 16px;
+  font-size: 1rem;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+  display: block;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6e707e;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #d1d3e2;
 }
