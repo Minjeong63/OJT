@@ -1,9 +1,11 @@
 import styles from "../styles/main.module.css";
 
-export default function CheckButton({ content }) {
+export default function CheckButton({ content, onClick }) {
   return (
     <div>
-      <button className="btn">{content}</button>
+      <button className="btn" onClick={onClick}>
+        {content}
+      </button>
       <style jsx>
         {`
           .btn:not(:disabled):not(.disabled) {
