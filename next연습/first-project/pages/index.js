@@ -1,11 +1,11 @@
 import router from "next/router";
 import { useState } from "react";
-import CheckButton from "../../../OJT/next연습/first-project/components/CheckButton";
+import CheckButton from "../components/CheckButton";
 import styles from "../styles/main.module.css";
 import axios from "axios";
-import TextInput from "../../../OJT/next연습/first-project/components/TextInput";
-import Footer from "../../../OJT/next연습/first-project/components/Layout/Footer";
-import Layout from "../../../OJT/next연습/first-project/components/Layout/Layout";
+import TextInput from "../components/TextInput";
+import Footer from "../components/Layout/Footer";
+import Layout from "../components/Layout/Layout";
 
 export default function Home() {
   const [code, setCode] = useState("");
